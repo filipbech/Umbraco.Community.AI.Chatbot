@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <UseProjectReferences Condition="'$(UseProjectReferences)' == ''">true</UseProjectReferences>
+    <UseProjectReferences Condition="'$(UseProjectReferences)' == ''">false</UseProjectReferences>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(UseProjectReferences)' == 'true'">

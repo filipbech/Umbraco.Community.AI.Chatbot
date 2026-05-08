@@ -1,0 +1,29 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "Title": "Umbraco Community AI Chatbot",
+  "Description": "Drops a public-facing, AI-powered chat widget on a website's frontend. End users on the public site type a question; the package runs a semantic search over the site's Umbraco content (Umbraco.AI.Search), feeds the matched pages into an Umbraco.AI.Agent, and streams a grounded answer back with cited source pages and follow-up suggestions.\n\nThe official Umbraco.AI.* packages expose chat only inside the backoffice. There is no path for an anonymous site visitor to ask questions of the site's content. This community package fills that gap.\n\nKey features:\n- Public-facing widget (drop in one <script> tag)\n- Grounded answers with cited source pages\n- Suggested follow-up questions\n- Streaming responses (SSE)\n- Per-IP rate limiting and request size caps\n- Per-instance configuration in the backoffice (welcome message, agent, fallback)\n\nRequires Umbraco CMS 17.3+, Umbraco.AI 1.10+, Umbraco.AI.Agent 1.9+, and a populated Umbraco.AI.Search index.",
+  "Category": "Artificial Intelligence",
+  "PackageType": "Package",
+  "LicenseTypes": ["Free"],
+  "DocumentationUrl": "https://github.com/filipbech/Umbraco.Community.AI.Chatbot#readme",
+  "IssueTrackerUrl": "https://github.com/filipbech/Umbraco.Community.AI.Chatbot/issues",
+  "Tags": ["chatbot", "rag", "ai", "agent", "search", "widget", "frontend", "streaming", "sse"],
+  "Screenshots": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/filipbech/Umbraco.Community.AI.Chatbot/main/docs/screenshots/widget-frontend.png",
+      "Caption": "The chat widget on the public site — grounded answer with suggested follow-up questions."
+    },
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/filipbech/Umbraco.Community.AI.Chatbot/main/docs/screenshots/backoffice-settings.png",
+      "Caption": "Configure each chat instance in the Umbraco backoffice: pick the agent, set welcome and fallback messages, tune sources per answer and follow-up count."
+    }
+  ],
+  "AuthorDetails": {
+    "Name": "Filip Bech",
+    "Description": "",
+    "Url": "https://github.com/filipbech",
+    "ImageUrl": "https://github.com/filipbech.png",
+    "Contributors": [],
+    "SyncContributorsFromRepository": true
+  }
+}

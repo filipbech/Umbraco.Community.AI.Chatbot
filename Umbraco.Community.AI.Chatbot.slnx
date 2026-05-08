@@ -5,6 +5,7 @@
     <Project Path="src/Umbraco.Community.AI.Chatbot.Persistence.SqlServer/Umbraco.Community.AI.Chatbot.Persistence.SqlServer.csproj" />
     <Project Path="src/Umbraco.Community.AI.Chatbot.Persistence.Sqlite/Umbraco.Community.AI.Chatbot.Persistence.Sqlite.csproj" />
     <Project Path="src/Umbraco.Community.AI.Chatbot.Web/Umbraco.Community.AI.Chatbot.Web.csproj" />
+    <Project Path="src/Umbraco.Community.AI.Chatbot.Web.StaticAssets/Umbraco.Community.AI.Chatbot.Web.StaticAssets.csproj" />
     <Project Path="src/Umbraco.Community.AI.Chatbot.Startup/Umbraco.Community.AI.Chatbot.Startup.csproj" />
     <Project Path="src/Umbraco.Community.AI.Chatbot/Umbraco.Community.AI.Chatbot.csproj" />
   </Folder>

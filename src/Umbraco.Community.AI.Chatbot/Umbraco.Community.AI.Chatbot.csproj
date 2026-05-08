@@ -2,7 +2,8 @@
   <PropertyGroup>
     <Title>Umbraco.Community.AI.Chatbot</Title>
     <Description>Public-facing AI chat for Umbraco websites — community package.</Description>
-    <PackageTags>umbraco ai agent chat community frontend</PackageTags>
+    <!-- This is the marketplace-listed meta-package; sub-packages omit `umbraco-marketplace`. -->
+    <PackageTags>umbraco;umbraco-marketplace;umbraco-ai;chatbot;rag;ai;chat;widget</PackageTags>
     <PackageReadmeFile>docs\README.md</PackageReadmeFile>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeSymbols>false</IncludeSymbols>
@@ -12,9 +13,11 @@
 
   <ItemGroup>
     <Content Include="..\..\README.md" Pack="true" PackagePath="docs" />
+    <None Include="..\..\umbraco-marketplace.json" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Startup\Umbraco.Community.AI.Chatbot.Startup.csproj" />
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Web.StaticAssets\Umbraco.Community.AI.Chatbot.Web.StaticAssets.csproj" />
   </ItemGroup>
 </Project>
