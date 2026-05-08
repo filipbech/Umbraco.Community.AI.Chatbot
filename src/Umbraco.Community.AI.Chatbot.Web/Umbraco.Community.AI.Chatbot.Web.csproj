@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <UseProjectReferences Condition="'$(UseProjectReferences)' == ''">true</UseProjectReferences>
+    <UseProjectReferences Condition="'$(UseProjectReferences)' == ''">false</UseProjectReferences>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,10 +15,14 @@
 
   <ItemGroup Condition="'$(UseProjectReferences)' == 'true'">
     <ProjectReference Include="..\..\..\..\Umbraco.AI\src\Umbraco.AI.Web\Umbraco.AI.Web.csproj" />
+    <ProjectReference Include="..\..\..\..\Umbraco.AI\src\Umbraco.AI.Web.StaticAssets\Umbraco.AI.Web.StaticAssets.csproj" />
+    <ProjectReference Include="..\..\..\..\Umbraco.AI.Agent\src\Umbraco.AI.Agent.Web.StaticAssets\Umbraco.AI.Agent.Web.StaticAssets.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
     <PackageReference Include="Umbraco.AI.Web" />
+    <PackageReference Include="Umbraco.AI.Web.StaticAssets" />
+    <PackageReference Include="Umbraco.AI.Agent.Web.StaticAssets" />
   </ItemGroup>
 
   <ItemGroup>

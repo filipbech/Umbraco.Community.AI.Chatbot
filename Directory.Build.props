@@ -9,7 +9,7 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
 
     <!-- Versioning. Bump here for releases (until we adopt GitVersion / Nerdbank). -->
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
 
     <!-- NuGet metadata applied to every shipping project in this repo. -->
     <Authors>Filip Bech-Larsen</Authors>
@@ -18,17 +18,20 @@
     <Copyright>Copyright (c) $([System.DateTime]::Now.Year) Filip Bech-Larsen</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://github.com/filipbech/Umbraco.Community.AI.Chatbot</PackageProjectUrl>
     <RepositoryUrl>https://github.com/filipbech/Umbraco.Community.AI.Chatbot</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>umbraco;umbraco-marketplace;umbraco-ai;chatbot;rag;ai;chat;widget</PackageTags>
+    <!-- Sub-packages stay out of the Umbraco marketplace; the meta-package adds `umbraco-marketplace` itself. -->
+    <PackageTags>umbraco;umbraco-ai;chatbot;rag;ai;chat;widget</PackageTags>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
-  <!-- Pack the README at the package root so nuget.org renders it on each package's listing. -->
+  <!-- Pack the README + icon at the package root so nuget.org renders them on each package's listing. -->
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Visible="false" Condition="Exists('$(MSBuildThisFileDirectory)README.md')" />
+    <None Include="$(MSBuildThisFileDirectory)assets\icon.png" Pack="true" PackagePath="\" Visible="false" Condition="Exists('$(MSBuildThisFileDirectory)assets\icon.png')" />
   </ItemGroup>
 </Project>
