@@ -1,4 +1,6 @@
-# Umbraco.Community.AI.Chatbot
+# Chatbot
+
+> NuGet package id: `Umbraco.Community.AI.Chatbot`
 
 A community Umbraco package that exposes a public-facing, AI-powered chat widget on a website's frontend. Visitors ask questions in natural language; the package runs a semantic search over your site's content (`Umbraco.AI.Search`), feeds matched pages into an `Umbraco.AI.Agent`, and streams a grounded answer back with cited source pages and follow-up suggestions.
 
