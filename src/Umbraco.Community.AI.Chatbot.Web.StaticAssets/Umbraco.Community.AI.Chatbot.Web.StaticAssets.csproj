@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <Title>Umbraco.Community.AI.Chatbot.Web.StaticAssets</Title>
+    <Description>Backoffice UI for the Umbraco.Community.AI.Chatbot package.</Description>
+    <StaticWebAssetBasePath>App_Plugins/UmbracoCommunityAIChatbot</StaticWebAssetBasePath>
+    <AddRazorSupportForMvc>false</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Client\**" />
+    <Content Include="Client\package.json" Pack="false" />
+    <Content Include="Client\tsconfig.json" Pack="false" />
+    <None Include="Client\public\umbraco-package.json" Pack="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Client\src\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+</Project>

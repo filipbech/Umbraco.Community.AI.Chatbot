@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Title>Umbraco.Community.AI.Chatbot.Startup</Title>
+    <Description>Composer that wires Umbraco.Community.AI.Chatbot into Umbraco.</Description>
+    <RootNamespace>Umbraco.Community.AI.Chatbot.Startup</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <UseProjectReferences Condition="'$(UseProjectReferences)' == ''">true</UseProjectReferences>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' == 'true'">
+    <ProjectReference Include="..\..\..\..\Umbraco.AI\src\Umbraco.AI.Startup\Umbraco.AI.Startup.csproj" />
+    <ProjectReference Include="..\..\..\..\Umbraco.AI.Agent\src\Umbraco.AI.Agent.Startup\Umbraco.AI.Agent.Startup.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
+    <PackageReference Include="Umbraco.AI.Startup" />
+    <PackageReference Include="Umbraco.AI.Agent.Startup" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Core\Umbraco.Community.AI.Chatbot.Core.csproj" />
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Persistence\Umbraco.Community.AI.Chatbot.Persistence.csproj" />
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Persistence.SqlServer\Umbraco.Community.AI.Chatbot.Persistence.SqlServer.csproj" />
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Persistence.Sqlite\Umbraco.Community.AI.Chatbot.Persistence.Sqlite.csproj" />
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Web\Umbraco.Community.AI.Chatbot.Web.csproj" />
+  </ItemGroup>
+</Project>

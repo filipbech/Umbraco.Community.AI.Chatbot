@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/umbraco/Umbraco.CMS.Backoffice/main/umbraco-package-schema.json",
+  "id": "Umbraco.Community.AI.Chatbot",
+  "name": "Umbraco Community AI Chatbot",
+  "version": "0.0.0",
+  "extensions": [
+    {
+      "type": "bundle",
+      "alias": "Umbraco.Community.AI.Chatbot.Bundle",
+      "name": "Umbraco Community AI Chatbot Bundle",
+      "js": "/App_Plugins/UmbracoCommunityAIChatbot/umbraco-community-chatbot-manifests.js"
+    }
+  ]
+}

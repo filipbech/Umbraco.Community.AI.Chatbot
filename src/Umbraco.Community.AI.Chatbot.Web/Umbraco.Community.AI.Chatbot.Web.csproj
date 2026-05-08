@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Title>Umbraco.Community.AI.Chatbot.Web</Title>
+    <Description>Public-facing API (anonymous SSE chat endpoint) for Umbraco.Community.AI.Chatbot.</Description>
+    <RootNamespace>Umbraco.Community.AI.Chatbot.Web</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <UseProjectReferences Condition="'$(UseProjectReferences)' == ''">true</UseProjectReferences>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' == 'true'">
+    <ProjectReference Include="..\..\..\..\Umbraco.AI\src\Umbraco.AI.Web\Umbraco.AI.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
+    <PackageReference Include="Umbraco.AI.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Core\Umbraco.Community.AI.Chatbot.Core.csproj" />
+    <ProjectReference Include="..\Umbraco.Community.AI.Chatbot.Persistence\Umbraco.Community.AI.Chatbot.Persistence.csproj" />
+  </ItemGroup>
+</Project>

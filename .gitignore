@@ -1,0 +1,37 @@
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+TestResults/
+artifacts/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+dist/
+.turbo/
+
+# StaticAssets build output — regenerated from Client/ by `npm run build`.
+# CI rebuilds this before `dotnet pack`.
+src/Umbraco.Community.AI.Chatbot.Web.StaticAssets/wwwroot/
+
+# Local config
+*.local.json
+appsettings.Development.json
+NuGet.local.config
+
+# NuGet output
+*.nupkg
+*.snupkg
+
+# Local sample site (see samples/README.md). Not committed so each contributor has their own.
+samples/DemoSite/

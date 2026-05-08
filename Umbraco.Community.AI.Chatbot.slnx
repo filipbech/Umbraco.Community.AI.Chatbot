@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Umbraco.Community.AI.Chatbot.Core/Umbraco.Community.AI.Chatbot.Core.csproj" />
+    <Project Path="src/Umbraco.Community.AI.Chatbot.Persistence/Umbraco.Community.AI.Chatbot.Persistence.csproj" />
+    <Project Path="src/Umbraco.Community.AI.Chatbot.Persistence.SqlServer/Umbraco.Community.AI.Chatbot.Persistence.SqlServer.csproj" />
+    <Project Path="src/Umbraco.Community.AI.Chatbot.Persistence.Sqlite/Umbraco.Community.AI.Chatbot.Persistence.Sqlite.csproj" />
+    <Project Path="src/Umbraco.Community.AI.Chatbot.Web/Umbraco.Community.AI.Chatbot.Web.csproj" />
+    <Project Path="src/Umbraco.Community.AI.Chatbot.Startup/Umbraco.Community.AI.Chatbot.Startup.csproj" />
+    <Project Path="src/Umbraco.Community.AI.Chatbot/Umbraco.Community.AI.Chatbot.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Umbraco.Community.AI.Chatbot.Tests.Unit/Umbraco.Community.AI.Chatbot.Tests.Unit.csproj" />
+  </Folder>
+</Solution>
