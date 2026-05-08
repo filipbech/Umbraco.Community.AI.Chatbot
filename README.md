@@ -9,6 +9,23 @@ A community Umbraco package that exposes a public-facing, AI-powered chat widget
 - `Umbraco.AI.Agent` 1.9+ — at least one configured Agent
 - `Umbraco.AI.Search` — a populated index over your site's content
 
+## A note on prerelease dependencies
+
+This 1.0.0 stable release transitively depends on two packages that are still in beta upstream:
+
+- `Umbraco.Cms.Search.Core` (1.0.0-beta.x)
+- `Umbraco.AI.Search.Core` (1.0.0-beta.x)
+
+NuGet doesn't pull prerelease versions into stable consumers by default. If `dotnet add package Umbraco.Community.AI.Chatbot` errors with *"requires a prerelease dependency"*, run it with the `--prerelease` flag, or pin a floating prerelease floor in your csproj:
+
+```xml
+<PackageReference Include="Umbraco.Community.AI.Chatbot" Version="1.0.0" />
+<PackageReference Include="Umbraco.Cms.Search.Core" Version="1.0.0-*" />
+<PackageReference Include="Umbraco.AI.Search.Core" Version="1.0.0-*" />
+```
+
+This restriction will go away once the upstream Search packages ship stable; we'll bump the floors here without a major version of our own.
+
 ## Quickstart
 
 1. **Install the NuGet package** in your Umbraco site project.
