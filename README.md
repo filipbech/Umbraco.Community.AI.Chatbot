@@ -31,7 +31,7 @@ This restriction will go away once the upstream Search packages ship stable; we'
 ## Quickstart
 
 1. **Install the NuGet package** in your Umbraco site project.
-2. **Build the search index** under *AI → Add-ons → Search* — the chat package reads from `UmbAI_Search`.
+2. **Build the search index** under *Settings → Search*. The chat package queries whichever index `Umbraco.AI.Search` is configured against.
 3. **Create an Agent** under *AI → Add-ons → Agents*. Put your brand voice / persona in the agent's **Instructions** field.
 4. **Create a Chat Instance** under *AI → Add-ons → Chatbot → Create*. Pick the agent you just made, set a welcome message and a fallback message.
 5. **Drop the widget script** into the public layout (e.g. `Views/Master.cshtml`):
@@ -122,14 +122,6 @@ The chat endpoint is anonymous. The package's `IChatPrincipalAccessor` is wired 
 ### XSS posture
 
 The widget renders the model's response through `marked` and `unsafeHTML`. The model is grounded in your own published content, so practical XSS surface is small — but if you index user-generated text (comments, forum posts), pipe model output through `DOMPurify` before rendering or strip HTML tags entirely.
-
-## Things explicitly not in MVP
-
-- Server-side conversation history / analytics — the widget owns history in `localStorage`, capped at 20 turns
-- Multi-instance scoping by content sub-tree
-- Member-aware content filtering implementation (the abstraction is wired)
-- SignalR (we use SSE)
-- Cross-origin (CORS) embedding — assume same-origin
 
 ## License
 
